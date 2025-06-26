@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>الصفحة الثانية</title>
+  <style>
+    body {
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      direction: rtl;
+    }
+    .container {
+      text-align: center;
+    }
+    .message {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    audio {
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="message">احلا تحيه</div>
+    <audio id="fartSound" controls autoplay>
+      <source src="https://www.soundjay.com/human/fart-01.mp3" type="audio/mpeg" />
+      المتصفح لا يدعم تشغيل الصوت.
+    </audio>
+  </div>
+
+  <script>
+    const audio = document.getElementById('fartSound');
+    audio.volume = 1;
+    audio.play();
+
+    setTimeout(() => {
+      audio.pause();
+      audio.currentTime = 0;
+    }, 10000); // 10 ثواني
+  </script>
+</body>
+</html>
